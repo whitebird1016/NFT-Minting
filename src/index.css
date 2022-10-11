@@ -1,0 +1,26 @@
+
+@font-face {
+  font-family: 'FastHands';
+  src: local('FastHands'), url(./fonts/FastHand.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'GeliatBold';
+  src: local('GeliatBold'), url(./fonts/Geliat-ExtraBold.otf) format('opentype');
+}
+@font-face {
+  font-family: 'GeliatLight';
+  src: local('Geliatlight'), url(./fonts/Geliat-ExtraLight.otf) format('opentype');
+}
+body {
+  margin: 0;
+  font-family: "FastHands";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
