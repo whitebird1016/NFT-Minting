@@ -42,6 +42,7 @@ const ButtonContent = styled(FlexContentRow)`
   font-size: 18px;
   padding: 15px 30px;
   border-radius: 40px;
+  cursor: pointer;
   @media screen and (max-width: 1000px) {
     display: none;
   }

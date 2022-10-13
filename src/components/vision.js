@@ -18,10 +18,13 @@ const WrapperText = styled.div`
   align-items: flex-start;
   line-height: 35px;
   max-width: 575px;
+  @media screen and (max-width: 500px) {
+    font-size: 18px;
+  }
 `;
 const WrapperTextTitle = styled.div`
   font-family: "FastHands";
-  font-size: 60px;
+  font-size: clamp(50px, 10vw, 70px);
   line-height: 81px;
 `;
 const WrapperTextColor = styled.span`
@@ -39,7 +42,7 @@ const Vision = () => {
         <VisionImage src={VisionAvatar} />
       </div>
 
-      <WrapperText>
+      <WrapperText id="vision">
         <WrapperTextTitle>
           <WrapperTextColor>powerful</WrapperTextColor> nft vision
         </WrapperTextTitle>

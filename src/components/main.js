@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { FlexContentRow } from "./element";
 import NFT from "../assets/image/nft.png";
 import { Public_Mint } from "../config";
+import { useHistory } from "react-router-dom";
 const Wrapper = styled(FlexContentRow)`
   gap: 50px;
   justify-content: center;
@@ -18,11 +19,14 @@ const WrapperText = styled.div`
   align-items: flex-start;
   line-height: 30px;
   max-width: 575px;
+  @media screen and (max-width: 500px) {
+    font-size: 18px;
+  }
 `;
 const WrapperTextTitle = styled.div`
   font-family: "FastHands";
-  font-size: 70px;
   line-height: 81px;
+  font-size: clamp(50px, 10vw, 70px);
 `;
 const WrapperTextColor = styled.span`
   color: #68d391;
@@ -36,24 +40,30 @@ const ButtonContent = styled(FlexContentRow)`
   font-size: 18px;
   padding: 10px 30px;
   border-radius: 40px;
+  cursor: pointer;
   font-family: "FastHands";
 `;
-const ButtonContent2 = styled.a`
+const ButtonContent2 = styled.div`
   border: 1px solid #2f80ed;
   font-size: 18px;
   padding: 10px 50px;
   border-radius: 40px;
   font-family: "FastHands";
   text-decoration: none;
+  cursor: pointer;
   color: white;
 `;
 const ButtonWrapper = styled(FlexContentRow)`
   gap: 20px;
 `;
 const Main = () => {
+  const history = useHistory();
+  const handleClick = () => {
+    history.push(Public_Mint);
+  };
   return (
     <Wrapper>
-      <WrapperText>
+      <WrapperText id="mint">
         <WrapperTextTitle>
           <WrapperTextColor>powerful</WrapperTextColor> nft vision
         </WrapperTextTitle>
@@ -67,7 +77,7 @@ const Main = () => {
         </>
         <ButtonWrapper>
           <ButtonContent>Connect</ButtonContent>
-          <ButtonContent2 href={Public_Mint}>Mint</ButtonContent2>
+          <ButtonContent2 onClick={handleClick}>Mint</ButtonContent2>
         </ButtonWrapper>
       </WrapperText>
       <MainImage src={NFT} />

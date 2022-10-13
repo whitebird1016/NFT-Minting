@@ -4,7 +4,7 @@ import { FlexContentColumn, FlexContentRow } from "./element";
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
 const Wrapper = styled(FlexContentColumn)`
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 13px 13px 0px 0px;
   border: 1px solid #2f80ed;
 `;
 
@@ -21,7 +21,7 @@ const WrapperContent = styled(FlexContentRow)`
 `;
 const DropText = styled(FlexContentRow)`
   font-family: "GeliatLight";
-  padding: 50px 80px;
+  padding: 40px 80px;
   font-size: 24px;
   color: white;
   line-height: 2;

@@ -15,8 +15,8 @@ const PublicPage = () => {
         <Route exact path="/">
           <Redirect to={Public_Profix} />
         </Route>
-        <Route exact path={Public_Mint} component={Mint} />
-        <Route exact path={Public_Profix} component={Home} />
+        <Route path={Public_Mint} component={Mint} />
+        <Route path={Public_Profix} component={Home} />
       </Switch>
     </Router>
   );

@@ -12,11 +12,11 @@ const WrapperContent = styled(FlexContentColumn)`
   background: rgba(255, 255, 255, 0.05);
   padding: 50px 50px;
   height: 500px;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 const WrapperTextTitle = styled.div`
   font-family: "FastHands";
-  font-size: 50px;
+  font-size: 45px;
   text-align: center;
 `;
 const WrapperTextFont = styled(FlexContentRow)`

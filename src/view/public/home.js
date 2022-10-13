@@ -27,7 +27,7 @@ const GeneralContent = styled(FlexContentColumn)`
 `;
 const GeneralText = styled(FlexContentRow)`
   justify-content: center;
-  font-size: 70px;
+  font-size: clamp(50px, 10vw, 70px);
 `;
 const FaqContent = styled(FlexContentColumn)`
   gap: 30px;
@@ -36,11 +36,9 @@ const Home = () => {
   return (
     <Wrapper>
       <WrapperContent>
-        <Main id="mint" />
-        <GeneralContent>
-          <GeneralText id="vision">OUR VISION</GeneralText>
-        </GeneralContent>
+        <Main />
         <Coin />
+        <Vision />
         <GeneralContent>
           <GeneralText id="about">About Us</GeneralText>
           <Team />
